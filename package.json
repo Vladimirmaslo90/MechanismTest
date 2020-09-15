@@ -1,0 +1,27 @@
+{
+  "name": "mechanismtest",
+  "version": "1.0.0",
+  "description": "test project for Mechanism",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "javascript"
+  ],
+  "author": "Volodymyr Maslo <Vladimirmaslo90@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "7.9.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-cypress": "2.11.1",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "lint-staged": "10.3.0",
+    "prettier": "2.1.1"
+  }
+}
