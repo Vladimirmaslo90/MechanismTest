@@ -27,3 +27,7 @@
 Cypress.Commands.add('clickLink', (label) => {
     cy.get('a').contains(label).click()
   })
+
+Cypress.Commands.add('clickButton', (label) => {
+    cy.get('button').contains(label).click()
+  })
