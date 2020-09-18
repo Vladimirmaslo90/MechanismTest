@@ -4,7 +4,8 @@ function searchForElement(searchKeyword){
 
 export class SearchResultsPage{
     validSearchAndCheckResults(searchKeyword) {
-         searchForElement(searchKeyword);
+        //login and password will be moved to env file 
+        searchForElement(searchKeyword);
         cy.get('span[class="NumberDisplay-sc-3pgyh3 jlezdB"]').invoke('attr', 'data-gif-count').then(parseFloat).should('be.gt', 0)
     }
 
