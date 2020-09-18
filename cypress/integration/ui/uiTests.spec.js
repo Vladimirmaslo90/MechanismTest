@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 import {mainPage} from "../../support/page_objects/mainPage"
 import {loginPage} from "../../support/page_objects/loginPage"
+import {searchResultsPage} from "../../support/page_objects/searchResultsPage"
 import 'cypress-file-upload'
 
 describe('Main ui tests', () => {
@@ -58,6 +59,22 @@ describe('Main ui tests', () => {
         cy.wait(8000);
         cy.get('div[class="message__Text-sc-1dazjsu-0 gSvxYc"]').should('contain', 'Upload Complete  - Open Channel')
         // TBR: both locators above can be moved to separate method
+    });
+
+    it('Search - valid searches GIF', () => {
+        searchResultsPage.validSearchAndCheckResults('dota')
+        searchResultsPage.validSearchAndCheckResults('the lord of the rings')
+        searchResultsPage.validSearchAndCheckResults('random')
+    });
+
+    it('Search - valid searche Stickers', () => {
+        searchResultsPage.validSearchAndCheckResults('random')
+        cy.get('div[class="sc-TFwJa bJtgkK"]').click();
+        cy.get('span[class="NumberDisplay-sc-3pgyh3 jlezdB"]').invoke('attr', 'data-gif-count').then(parseFloat).should('be.gt', 0)
+    });
+
+    it('Search - Invalid search', () => {
+        searchResultsPage.invalidSearch('%%%%%%%')
     });
 });
 
