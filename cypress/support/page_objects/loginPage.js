@@ -8,7 +8,7 @@ function loginToGiphy(username, password){
 export class LoginPage{
     login() {
         //login and password will be moved to env file 
-        loginToGiphy('Linkinnparkk90@gmail.com', 'IT2013Lab!');
+        loginToGiphy(Cypress.env('username'), Cypress.env('password'));
     }
 
 }

@@ -5,6 +5,10 @@
     "retries": {
       "runMode": 2,
       "openMode": 1
+    },
+    "env": {
+      "username": "Linkinnparkk90@gmail.com",
+      "password": "IT2013Lab!"
     }
   }
   

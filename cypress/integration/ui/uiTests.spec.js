@@ -33,12 +33,12 @@ describe('Main ui tests', () => {
         cy.get('div.KRS9L9BsuEdhF-ACKiX8x div a').invoke('attr', 'href').should('contain', youtubeUrl) // verify url on main image of the screen
     });
 
-    it('Upload - Browse Your Files - Single file', () => {
+    it.only('Upload - Browse Your Files - Single file', () => {
         loginPage.login();
         cy.clickLink('Upload');
         cy.get('div.QRF3vZyoeZvDoXh9oMH_s > div:nth-child(1) > input[type=file]').attachFile('hardwork.gif');
         cy.clickButton('Upload to GIPHY');
-        cy.wait(6000);
+        cy.wait(5000);
         //cy.wait('@waitForUploadToBeFinished1')
         // TBR: Replace implicit wait to wait specific method to be finished. My first attempt failed
         //cy.server()
@@ -48,7 +48,7 @@ describe('Main ui tests', () => {
         cy.get('img[alt="Animated GIF"]').should('be.visible');
     });
 
-    it('Upload - Browse Your Files - Multiply files', () => {
+    it.only('Upload - Browse Your Files - Multiply files', () => {
         loginPage.login();
         cy.clickLink('Upload');
         cy.get('div.QRF3vZyoeZvDoXh9oMH_s > div:nth-child(1) > input[type=file]')
@@ -56,7 +56,7 @@ describe('Main ui tests', () => {
             .attachFile('tenor.gif')
         cy.clickButton('Upload to GIPHY');
         cy.get('div[class="message__Text-sc-1dazjsu-0 gSvxYc"]').should('contain', 'Uploading 1 of 2')
-        cy.wait(8000);
+        cy.wait(9000);
         cy.get('div[class="message__Text-sc-1dazjsu-0 gSvxYc"]').should('contain', 'Upload Complete  - Open Channel')
         // TBR: both locators above can be moved to separate method
     });
