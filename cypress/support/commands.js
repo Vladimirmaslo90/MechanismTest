@@ -55,7 +55,7 @@ Cypress.Commands.add('randomApiCall', (type = 'gifs') => {
 })
 })
 
-Cypress.Commands.add('uploadApiCall', (filename) => {
+Cypress.Commands.add('uploadApiCall', () => {
   cy.request({
     method: 'POST',
     url: 'upload.giphy.com/v1/gifs',

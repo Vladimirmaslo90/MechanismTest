@@ -34,7 +34,7 @@ describe('Giphy API tests', () => {
     });
 
     it('Upload a file', () => {
-        cy.uploadApiCall('hardwork.gif').then((response) => {
+        cy.uploadApiCall().then((response) => {
             expect(response.status).equal(200)
             expect(response.body.data).to.have.any.keys('id')
             expect(response.body.meta.msg).to.eq('OK')
@@ -58,6 +58,6 @@ describe('Giphy API tests', () => {
               form: false
            })
            //TBR: Getting Cypress error "Maximum Call stack size exceeded"
-           //In The Postman getting another errors: 1) When in the body I used 'binary' option for body, getting 'The resourse that is beign acceses is locked'; 2)When sending binary or base64 string as parameter - getting 400 Bad request
+           //In The Postman I was able to upload a file via 'Form-data' option of the body (just like an attachment of common .gif file)
     });
 });
