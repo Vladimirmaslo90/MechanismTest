@@ -9,7 +9,12 @@
     "env" : {
       "apiKey": "Q8UW2qkkVdEsEzU8lfhl20WMp5cpM2KU"
     },
-    "reporter": "cypress-mochawesome-reporter"
-    
+    "reporter": "mochawesome",
+    "reporterOptions": {
+      "reportDir": "cypress/results",
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
   }
   
