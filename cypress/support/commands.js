@@ -31,3 +31,27 @@ Cypress.Commands.add('clickLink', (label) => {
 Cypress.Commands.add('clickButton', (label) => {
     cy.get('button').contains(label).click()
   })
+
+
+Cypress.Commands.add('searchApiCall', (type = 'gifs', searchKeyword) => {
+  cy.request({
+    method: 'GET',
+    url: `api.giphy.com/v1/${type}/search`,
+    qs: {
+        "api_key" : Cypress.env('apiKey'),
+        "q": searchKeyword,
+        "limit": 1
+    }
+})
+})
+  
+Cypress.Commands.add('randomApiCall', (type = 'gifs') => {
+  cy.request({
+    method: 'GET',
+    url: `api.giphy.com/v1/${type}/random`,
+    qs: {
+        "api_key" : Cypress.env('apiKey')
+    }
+})
+})
+

@@ -5,6 +5,10 @@
     "retries": {
       "runMode": 2,
       "openMode": 1
+    },
+    "env" : {
+      "apiKey": "Q8UW2qkkVdEsEzU8lfhl20WMp5cpM2KU"
     }
+    
   }
   
