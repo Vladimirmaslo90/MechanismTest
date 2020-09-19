@@ -40,7 +40,7 @@ Cypress.Commands.add('searchApiCall', (type = 'gifs', searchKeyword) => {
     qs: {
         "api_key" : Cypress.env('apiKey'),
         "q": searchKeyword,
-        "limit": 1
+        "limit": 20
     }
 })
 })
@@ -52,6 +52,22 @@ Cypress.Commands.add('randomApiCall', (type = 'gifs') => {
     qs: {
         "api_key" : Cypress.env('apiKey')
     }
+})
+})
+
+Cypress.Commands.add('uploadApiCall', (filename) => {
+  cy.request({
+    method: 'POST',
+    url: 'upload.giphy.com/v1/gifs',
+    body: {
+      "api_key" : Cypress.env('apiKey'),
+      "source_image_url" : "https://media2.giphy.com/media/0ywm2kXSmI8prvqT4y/giphy.gif"
+    },
+    qs: {
+      "api_key" : Cypress.env('apiKey')
+    },
+    form: true
+
 })
 })
 
