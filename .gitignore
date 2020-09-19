@@ -67,3 +67,7 @@ typings/
 # cypress video and screenshoots
 cypress/videos/
 cypress/screenshot/
+
+# cypress results and reports
+cypress/reports
+cypress/results
