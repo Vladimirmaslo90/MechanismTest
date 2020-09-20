@@ -27,6 +27,7 @@ describe('Giphy API tests', () => {
             expect(response.status).equal(200)
             expect(response.body).to.not.be.null
             expect(response.body.data).to.have.any.keys('type', 'gif')
+            expect(response.body.data).to.have.any.keys('id')
             expect(response.body.meta).to.have.any.keys('response_id')
         })
     });
@@ -35,6 +36,8 @@ describe('Giphy API tests', () => {
         cy.randomApiCall('stickers').then((response) => {
             expect(response.status).equal(200)
             expect(response.body).to.not.be.null
+            expect(response.body.data).to.have.any.keys('type', 'gif')
+            expect(response.body.data).to.have.any.keys('id')
             expect(response.body.meta).to.have.any.keys('response_id')
         })
     });
