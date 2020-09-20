@@ -22,6 +22,7 @@
   "devDependencies": {
     "cypress-file-upload": "^4.1.1",
     "mochawesome": "6.1.1",
+    "cypress": "5.2.0",
     "mochawesome-merge": "4.1.0",
     "mochawesome-report-generator": "5.1.0",
     "eslint": "7.9.0",
