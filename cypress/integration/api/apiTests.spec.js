@@ -5,6 +5,7 @@ describe('Giphy API tests', () => {
             expect(response.status).equal(200)
             expect(response.body).to.not.be.null
             assert.isAbove(response.body.data.length, 0, 'data of response is empty')
+            expect(response.body.meta).to.have.any.keys('response_id')
         })
 
     });
@@ -14,7 +15,7 @@ describe('Giphy API tests', () => {
             expect(response.status).equal(200)
             expect(response.body).to.not.be.null
             assert.isAbove(response.body.data.length, 0, 'data of response is empty')
-            expect(response.body.data.length).to.be.equal(20);
+            expect(response.body.meta).to.have.any.keys('response_id')
         })
 
     });
@@ -23,6 +24,7 @@ describe('Giphy API tests', () => {
         cy.randomApiCall('gifs').then((response) => {
             expect(response.status).equal(200)
             expect(response.body).to.not.be.null
+            expect(response.body.meta).to.have.any.keys('response_id')
         })
     });
 
@@ -30,6 +32,7 @@ describe('Giphy API tests', () => {
         cy.randomApiCall('stickers').then((response) => {
             expect(response.status).equal(200)
             expect(response.body).to.not.be.null
+            expect(response.body.meta).to.have.any.keys('response_id')
         })
     });
 
@@ -37,7 +40,7 @@ describe('Giphy API tests', () => {
         cy.uploadApiCall().then((response) => {
             expect(response.status).equal(200)
             expect(response.body.data).to.have.any.keys('id')
-            expect(response.body.meta.msg).to.eq('OK')
+            expect(response.body.meta.msg).to.eq('OK')   
     }); 
 })
 
