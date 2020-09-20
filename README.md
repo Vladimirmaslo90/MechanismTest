@@ -17,5 +17,5 @@ Reporting tool: [Mochawesome](https://www.npmjs.com/package/mochawesome)
 
 
 
-[cirleci](https://serving.photos.photobox.com/6653994364242da622ae2617eb43ec6a141f364d3053607fd8e99c0f3ee6fe33694e2422.jpg)
+![cirleci](https://serving.photos.photobox.com/6653994364242da622ae2617eb43ec6a141f364d3053607fd8e99c0f3ee6fe33694e2422.jpg)
 
