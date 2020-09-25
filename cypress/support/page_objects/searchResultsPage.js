@@ -1,5 +1,5 @@
 function searchForElement(searchKeyword){
-    cy.get('input[class="Input-sc-w75cdz fHIYrP"]').type(searchKeyword).type('{enter}');
+    cy.get('input[class="Input-sc-w75cdz tdeeo"]').type(searchKeyword).type('{enter}');
 }
 
 export class SearchResultsPage{

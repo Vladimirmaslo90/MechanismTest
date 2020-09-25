@@ -54,10 +54,11 @@ describe('Main ui tests', () => {
         cy.get('div.QRF3vZyoeZvDoXh9oMH_s > div:nth-child(1) > input[type=file]')
             .attachFile('hardwork.gif')
             .attachFile('tenor.gif')
+        cy.wait(1000);
         cy.clickButton('Upload to GIPHY');
-        cy.get('div[class="message__Text-sc-1dazjsu-0 gSvxYc"]').should('contain', 'Uploading 1 of 2')
-        cy.wait(8000);
-        cy.get('div[class="message__Text-sc-1dazjsu-0 gSvxYc"]').should('contain', 'Upload Complete  - Open Channel')
+        //cy.get('div[class="message__Text-sc-1dazjsu-0 gSvxYc"]').should('contain', 'Uploading 1 of 2')
+        cy.wait(13000);
+        cy.get('div[class="message__Text-sc-1dazjsu-0 kbZVYZ"]').should('contain', 'Upload Complete  - Open Channel')
         // TBR: both locators above can be moved to separate method
     });
 
@@ -67,15 +68,15 @@ describe('Main ui tests', () => {
         searchResultsPage.validSearchAndCheckResults('random')
     });
 
-    it('Search - valid searche Stickers', () => {
+    it('Search - valid searches Stickers', () => {
         searchResultsPage.validSearchAndCheckResults('random')
-        cy.get('div[class="sc-TFwJa bJtgkK"]').click();
+        cy.get('div[class="sc-gGGEav hTSvst"]').click();
         cy.get('span[class="NumberDisplay-sc-3pgyh3 jlezdB"]').invoke('attr', 'data-gif-count').then(parseFloat).should('be.gt', 0)
     });
 
     it('Search - Invalid search', () => {
         searchResultsPage.invalidSearch('%%%%%%%')
-        searchResultsPage.invalidSearch('&&&&&&')
+        searchResultsPage.invalidSearch('$$$$$$$$$$$$')
     });
 });
 

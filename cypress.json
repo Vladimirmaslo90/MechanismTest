@@ -3,8 +3,8 @@
     "viewportHeight": 1080,
     "viewportWidth": 1920,
     "retries": {
-      "runMode": 2,
-      "openMode": 1
+      "runMode": 1,
+      "openMode": 0
     },
     "env" : {
       "apiKey": "Q8UW2qkkVdEsEzU8lfhl20WMp5cpM2KU",
