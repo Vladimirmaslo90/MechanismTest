@@ -75,6 +75,7 @@ describe('Main ui tests', () => {
 
     it('Search - Invalid search', () => {
         searchResultsPage.invalidSearch('%%%%%%%')
+        searchResultsPage.invalidSearch('&&&&&&')
     });
 });
 

@@ -7,7 +7,9 @@
       "openMode": 1
     },
     "env" : {
-      "apiKey": "Q8UW2qkkVdEsEzU8lfhl20WMp5cpM2KU"
+      "apiKey": "Q8UW2qkkVdEsEzU8lfhl20WMp5cpM2KU",
+      "username": "testformechanism1@gmail.com",
+      "password": "Test1234!"
     },
     "reporter": "mochawesome",
     "reporterOptions": {

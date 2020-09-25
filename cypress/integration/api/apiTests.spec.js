@@ -1,12 +1,12 @@
 describe('Giphy API tests', () => {
     
     it('Search Endpoint Gifs', () => {
-        cy.searchApiCall('gifs', 'redbull').then((response) => {
+        cy.searchApiCall('gifs', 'dota').then((response) => {
             expect(response.status).equal(200)
             expect(response.body).to.not.be.null
             assert.isAbove(response.body.data.length, 0, 'data of response is empty')
             expect(response.body.meta).to.have.any.keys('response_id')
-            expect(response.body.data[0].title).to.contain('redbull')
+            expect(response.body.data[0].title).to.contain('dota')
         })
 
     });
